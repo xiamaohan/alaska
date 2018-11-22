@@ -6,6 +6,7 @@
 		<groupId>io.jee.alaska</groupId>
 		<artifactId>alaska-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>alaska-core</artifactId>
 
@@ -22,7 +23,7 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>4.1.19</version>
+			<version>4.1.21</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>

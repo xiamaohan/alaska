@@ -171,5 +171,6 @@
 		<module>alaska-boot-autoconfigure</module>
 		<module>alaska-alibaba</module>
 		<module>alaska-pay</module>
+		<module>alaska-firewall</module>
 	</modules>
 </project>
