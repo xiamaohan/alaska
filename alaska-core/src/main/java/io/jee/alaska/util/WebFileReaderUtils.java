@@ -75,9 +75,6 @@ public class WebFileReaderUtils {
 		        output.write(buffer.array(), 0, bytesLeft < bytesRead ? (int) bytesLeft : bytesRead);
 		        bytesLeft -= bytesRead;
 		        bytesWrite += bytesRead;
-		        if(bytesLeft < buffer.limit()) {
-		    		buffer.limit((int) bytesLeft);
-		    	}
 	    	}
 //			while ((bytesRead = input.read(buffer)) != -1) {
 //				buffer.clear();
@@ -147,9 +144,6 @@ public class WebFileReaderUtils {
 		        output.write(buffer.array(), 0, bytesLeft < bytesRead ? (int) bytesLeft : bytesRead);
 		        bytesLeft -= bytesRead;
 		        bytesWrite += bytesRead;
-		        if(bytesLeft < buffer.limit()) {
-		    		buffer.limit((int) bytesLeft);
-		    	}
 	    	}
 	    }catch (IOException e) {
 		}finally {
