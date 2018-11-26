@@ -62,7 +62,7 @@ public class WebFileReaderUtils {
 	    int bytesRead;
 	    long bytesLeft = contentLength;
 	    long bytesWrite = 0l;
-	    ByteBuffer buffer = ByteBuffer.allocate((int) (BUFFER_LENGTH>bytesLeft?bytesLeft:BUFFER_LENGTH));
+	    ByteBuffer buffer = ByteBuffer.allocate(BUFFER_LENGTH);
 
 	    SeekableByteChannel input = Files.newByteChannel(path, StandardOpenOption.READ);
 	    OutputStream output = response.getOutputStream();
@@ -134,7 +134,7 @@ public class WebFileReaderUtils {
 	    int bytesRead;
 	    long bytesLeft = contentLength;
 	    long bytesWrite = 0l;
-	    ByteBuffer buffer = ByteBuffer.allocate((int) (BUFFER_LENGTH>bytesLeft?bytesLeft:BUFFER_LENGTH));
+	    ByteBuffer buffer = ByteBuffer.allocate(BUFFER_LENGTH);
 
 	    SeekableByteChannel input = Files.newByteChannel(path, StandardOpenOption.READ);
 	    OutputStream output = response.getOutputStream();
