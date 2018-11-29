@@ -68,6 +68,10 @@ public class Result<T> implements Serializable {
 		return new Result<T>(false, code, message, data, errorFields);
 	}
 	
+	public static <T> Result<T> error(ResultError resultError){
+		return Result.error(resultError.getCode(), resultError.getMessage(), null, null);
+	}
+	
 	public static <T> Result<T> code(Integer code, String message){
 		return Result.code(code, message, null);
 	}
