@@ -26,12 +26,12 @@ public class PageInputDataTable {
 	public void setLength(int length) {
 		this.length = length;
 	}
-
+	
 	public PageRequest toPageRequest(HttpServletRequest request){
 		String order = request.getParameter("order[0][column]");//排序的列号
         String orderDir = request.getParameter("order[0][dir]");//排序的顺序asc or desc
         String orderColumn = request.getParameter("columns["+order+"][data]");//排序的列。注意，我认为页面上的列的名字要和表中列的名字一致，否则，会导致SQL拼接错误
-		Direction direction = Direction.ASC;
+        Direction direction = Direction.ASC;
 		if(StringUtils.isNotBlank(orderDir) && orderDir.equalsIgnoreCase("desc")){
 			direction = Direction.DESC;
 		}
@@ -39,6 +39,10 @@ public class PageInputDataTable {
 			return PageRequest.of(start/length, length);
 		}
 		return PageRequest.of(start/length, length, direction, orderColumn);
+	}
+	
+	public String getSearch(HttpServletRequest request) {
+		return request.getParameter("search[value]");
 	}
 
 }
