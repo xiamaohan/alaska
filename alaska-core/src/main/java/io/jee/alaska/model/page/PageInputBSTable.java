@@ -10,6 +10,7 @@ public class PageInputBSTable {
 	private int limit = 10;
 	private String sort;
 	private String order;
+	private String search;
 	
 	public int getOffset() {
 		return offset;
@@ -41,6 +42,14 @@ public class PageInputBSTable {
 
 	public void setOrder(String order) {
 		this.order = order;
+	}
+
+	public String getSearch() {
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
 	}
 
 	public PageRequest toPageRequest(){
