@@ -66,6 +66,13 @@ public class BSTableColumn {
 		this.sortable = sortable;
 	}
 	
+	public BSTableColumn(String field, String title, Boolean sortable, Integer rowspan) {
+		this.field = field;
+		this.title = title;
+		this.sortable = sortable;
+		this.rowspan = rowspan;
+	}
+
 	public String getField() {
 		return field;
 	}
